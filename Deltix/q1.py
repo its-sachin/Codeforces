@@ -8,7 +8,7 @@ def func(array,n,m):
     i = 0
     firstO = False
     while(i < n):
-
+        # print(m)
         # print("at i=" , i)
         # for a in range(n):
         #     print(array[a],end = "")
@@ -22,50 +22,30 @@ def func(array,n,m):
                     array[j] = '1'
                     j-=1
                 firstO = True
+        
             
-            elif (i == n-1):
-                j = i-1
-                notF = True
-                while(j>= i-m and j>=0 and notF):
-                    if (array[j]=='1'):
-                        notF = False
-                    else:
-                        j-=1
-
-                if (notF):
-                    j = i-1
-                    while(j>=i-m and j>=0):
-                        array[j] = '1'
-                        j-=1
-                    
-                else:
-                    a = i-1
-                    b = j+1
-                    while(a<b):
-                        array[a] = '1'
-                        array[b] = '1'
-                        a-=1
-                        b+=1
-
             j = i+1
             notF = True
-            while(j<= i+m and j<n and notF):
+            while(j<n and notF):
                 if (array[j]=='1'):
                     notF = False
                 else:
                     j+=1
 
+            # print("i is ",i," j is ",j," notF is ", notF)
             if (notF):
                 j = i+1
+                # print(j,i+m,n)
                 while(j<=i+m and j<n):
+                    # print("kk")
                     array[j] = '1'
                     j+=1
                 
-                i = j
+                i = n
             else:
                 a = i+1
                 b = j-1
-                while(a<b):
+                while(a<b and a<=i+m and b>=j-m):
                     array[a] = '1'
                     array[b] = '1'
                     a+=1
