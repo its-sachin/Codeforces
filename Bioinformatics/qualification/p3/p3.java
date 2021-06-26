@@ -69,7 +69,7 @@ class p3{
                 // } 
 
                 for (int i=0; i<p; i++){
-                    System.out.println("PATIENTS LEFT " + Integer.toString(p-i) );
+                    System.out.println("PATIENTS LEFT " + Integer.toString(p-i));
 
                     int maxVal = Integer.MIN_VALUE;
                     int diesease = 0;
