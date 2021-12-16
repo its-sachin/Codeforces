@@ -1,0 +1,1 @@
+{"name":"Local: q1","url":"e:\\Practice\\CodeForces\\758\\q1.py","tests":[{"id":1639249293144,"input":"3\n1\n2\n7","output":"1\n2 3\n111 1111 11111 111111 1111111 11111111 111111111"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\Practice\\CodeForces\\758\\q1.py","group":"local","local":true}

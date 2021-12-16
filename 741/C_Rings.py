@@ -1,0 +1,23 @@
+for _ in range(int(input())):
+    n=int(input())
+    s=input()
+    i=0
+    done=False
+    while(i<n//2):
+        if(s[i]=='0'):
+            print(i+1,n,i+2,n)
+            done=True
+            break
+        i+=1
+    if(done):
+        continue
+    i=n//2
+    while(i<n):
+        if(s[i]=='0'):
+            print(1,i+1,1,i)
+            done=True
+            break
+        i+=1
+    if(done):
+        continue
+    print(1,n-1,2,n)
