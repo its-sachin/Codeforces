@@ -1,3 +1,4 @@
+import bisect
 for _ in range(int(input())):
     n=int(input())
     vals = {}
@@ -20,8 +21,8 @@ for _ in range(int(input())):
         if i[0]==i[1]:i.append(i[1])
         else:
 
-            jr = vals[i[0]]['r'].index(i[1])
-            jl = vals[i[1]]['l'].index(i[0])
+            jr = bisect.bisect_left(vals[i[0]]['r'],i[1])
+            jl =  bisect.bisect_left(vals[i[1]]['l'],i[0])
             if(jl == len(vals[i[1]]['l']) -1):
                 i.append(i[1])
             elif(jr == 0):
